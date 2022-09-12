@@ -1,3 +1,7 @@
+'''
+What is the output of the following code?
+'''
+
 A0 = dict(zip(('a','b','c','d','e'),(1,2,3,4,5)))
 # zip function binds the keys to their corresponding values.
 
