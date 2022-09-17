@@ -1,4 +1,19 @@
-
+'''
+Attributes created in .__init__() are called instance attributes.
+An instance attributes value is specific to a particular instance
+of the class. All Dog objects have a name, age, and breed but the
+values for the name and age attributes will vary depending on the
+Dog instance.
+On the other hand, class attributes are attributes that have the same
+value for all class instances. You can define a class attribute by
+assigning a value to a variable name outside of .__init__().
+Use class attributes to define properties that should have the same
+value for every class instance. Use instance attributes for properties
+that vary from one instance to another.
+Use the __init__() function to assign values to object properties,
+or other operations that are necessary to do when the object is being
+created:
+'''
 from plumbum import cli
 class Pets(cli.Application):
     #class attribute
@@ -11,24 +26,11 @@ class Pets(cli.Application):
     class Dogs:
         def __init__(self,name,age,breed):
             global Record
+            #Instance attributes
             self.name = name
             self.age = age
             self.breed = breed
             Record_dogs[self.name] = [self.age,self.breed]
-            #Attributes created in .__init__() are called instance attributes.
-            # An instance attribute’s value is specific to a particular instance
-            # of the class. All Dog objects have a name, age, and breed but the
-            # values for the name and age attributes will vary depending on the
-            # Dog instance.
-            #On the other hand, class attributes are attributes that have the same
-            # value for all class instances. You can define a class attribute by
-            # assigning a value to a variable name outside of .__init__().
-            #Use class attributes to define properties that should have the same
-            # value for every class instance. Use instance attributes for properties
-            # that vary from one instance to another.
-            # Use the __init__() function to assign values to object properties,
-            # or other operations that are necessary to do when the object is being
-            # created:.
         def __str__(self):
             #Methods like .__init__() and .__str__() are called dunder methods
             # because they begin and end with double underscores. There are many
