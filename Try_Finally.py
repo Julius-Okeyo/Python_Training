@@ -22,6 +22,7 @@ A safer way is to use a try...finally block.
 
 try:
     f = open('C:/Users/User/Python_Training/Try_Finally.py',encoding='utf-8')
+    print(f.read())
     temp = f.read()
     f = open('C:/Users/User/Copy.py','w')
     f.write(temp)
