@@ -13,6 +13,11 @@ that vary from one instance to another.
 Use the __init__() function to assign values to object properties,
 or other operations that are necessary to do when the object is being
 created:
+Another useful magic method is __str__(). It is overridden to return
+a printable string representation of any user defined class. We have
+seen str() built-in function which returns a string from the object
+parameter. For example, str(12) returns '12'. When invoked, it calls
+the __str__() method in the int class.
 '''
 from plumbum import cli
 class Pets(cli.Application):
